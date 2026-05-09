@@ -35,18 +35,12 @@ def is_prime(number: int) -> bool:
     """
     if not isinstance(number, int):
         return False
-    elif isinstance(number, str):
+    if number <= 1:
         return False
-    elif isinstance(number, float):
-        return False
-    elif number <= 1:
-        return False
-    else:
-        for i in range(2, number):
-            if number % i == 0:
-                return False
-        else:
-            return True
+    for i in range(2, number):
+        if number % i == 0:
+            return False
+    return True
 
 
 def main() -> None:
