@@ -29,7 +29,7 @@ def is_leap_year(year: int) -> bool:
 
 
 def main() -> None:
-    "Main function. In and Out of the user."
+    """User input and output."""
     year = int(input("Type the year that you want to verify: "))
 
     if is_leap_year(year):

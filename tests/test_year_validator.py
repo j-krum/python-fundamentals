@@ -1,7 +1,6 @@
 # test_year_validator.py
 """Tests for the module year_validator."""
 
-import pytest
 from year_validator import is_leap_year
 
 
@@ -26,7 +25,7 @@ class TestIsLeapYear:
         assert is_leap_year(2020) is True
 
     def test_year_not_divisible_by_4_not_leap(self):
-        """Years nor divisible by 4
+        """Years NOT divisible by 4
         ARE NOT leap years."""
         assert is_leap_year(2023) is False
         assert is_leap_year(2021) is False
