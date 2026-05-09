@@ -7,7 +7,7 @@ from year_validator import is_leap_year
 class TestIsLeapYear:
     """Tests for the is_leap_year function."""
 
-    def test_year_divisible_by400_is_leap(self):
+    def test_year_divisible_by_400_is_leap(self):
         """Years divisible by 400 ARE leap years."""
         assert is_leap_year(2000) is True
         assert is_leap_year(1600) is True
