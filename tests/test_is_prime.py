@@ -9,8 +9,8 @@ class TestIsPrime:
 
     def test_is_prime_float(self):
         """The number is not an integer, ISN'T prime."""
-        assert is_prime(1.5) is False
-        assert is_prime(2.5) is False
+        assert is_prime(1.5) is False  # type: ignore
+        assert is_prime(2.5) is False  # type: ignore
 
     def test_is_prime_negatives(self):
         """The number is negative, ISN'T prime"""
@@ -38,4 +38,4 @@ class TestIsPrime:
         assert is_prime(10) is False
 
     def test_letters_and_special_characters(self):
-        assert is_prime("This is a string with Sp&c|4L@$#%") is False
+        assert is_prime("String with Sp&c|4L@$#%") is False  # type: ignore
