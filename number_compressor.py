@@ -48,12 +48,33 @@ def number_compressor(num1: int, num2: int, num3: int) -> int:
 
 def main() -> None:
     """User I/O"""
+    # Testing first number.
     while True:
         try:
             num1 = int(input("Enter the first digit (0-9): "))
-            num2 = int(input("Enter the first digit (0-9): "))
-            num3 = int(input("Enter the first digit (0-9): "))
-            number_compressor(num1, num2, num3)
+            if not (0 <= num1 <= 9):
+                raise ValueError("Digit must be between 0 and 9.")
             break
         except ValueError as e:
-            print(f"Invalid input: {e}. Try again.")
+            print(f"Invalid input: {e}. Try again")
+    # Testing second number.
+    while True:
+        try:
+            num2 = int(input("Enter the second digit (0-9): "))
+            if not (0 <= num2 <= 9):
+                raise ValueError("Digit must be between 0 and 9.")
+            break
+        except ValueError as e:
+            print(f"Invalid input: {e}. Try again")
+    # Testing third number.
+    while True:
+        try:
+            num3 = int(input("Enter the third digit (0-9): "))
+            if not (0 <= num3 <= 9):
+                raise ValueError("Digit must be between 0 and 9.")
+            break
+        except ValueError as e:
+            print(f"Invalid input: {e}. Try again")
+    # Compressing the numbers
+    result = number_compressor(num1, num2, num3)
+    print(f"Compressed number: {result}")
