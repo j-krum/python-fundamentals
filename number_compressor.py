@@ -44,3 +44,16 @@ def number_compressor(num1: int, num2: int, num3: int) -> int:
         raise ValueError("All inputs must be single digits (0-9)")
     # Compress
     return int(str(num1) + str(num2) + str(num3))
+
+
+def main() -> None:
+    """User I/O"""
+    while True:
+        try:
+            num1 = int(input("Enter the first digit (0-9): "))
+            num2 = int(input("Enter the first digit (0-9): "))
+            num3 = int(input("Enter the first digit (0-9): "))
+            number_compressor(num1, num2, num3)
+            break
+        except ValueError as e:
+            print(f"Invalid input: {e}. Try again.")

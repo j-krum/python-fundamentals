@@ -22,3 +22,7 @@ class TestNumberCompressor:
     def test_raises_on_negative(self):
         with pytest.raises(ValueError):
             number_compressor(-1, 1, 3)
+
+    def test_raises_on_string(self):
+        with pytest.raises(ValueError):
+            number_compressor("hello", 1, 2)
