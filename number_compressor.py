@@ -41,7 +41,7 @@ def number_compressor(num1: int, num2: int, num3: int) -> int:
         raise ValueError("All inputs must be integers.")
     # Guard 2: all three are single digits (0-9)
     if not (0 <= num1 <= 9) or not (0 <= num2 <= 9) or not (0 <= num3 <= 9):
-        raise ValueError("All inputs must be single digits (0-9)")
+        raise ValueError("All inputs must be single digits (0-9).")
     # Compress
     return int(str(num1) + str(num2) + str(num3))
 
@@ -56,7 +56,7 @@ def main() -> None:
                 raise ValueError("Digit must be between 0 and 9.")
             break
         except ValueError as e:
-            print(f"Invalid input: {e}. Try again")
+            print(f"Invalid input: {e}. Try again.")
     # Testing second number.
     while True:
         try:
@@ -65,7 +65,7 @@ def main() -> None:
                 raise ValueError("Digit must be between 0 and 9.")
             break
         except ValueError as e:
-            print(f"Invalid input: {e}. Try again")
+            print(f"Invalid input: {e}. Try again.")
     # Testing third number.
     while True:
         try:
@@ -74,7 +74,11 @@ def main() -> None:
                 raise ValueError("Digit must be between 0 and 9.")
             break
         except ValueError as e:
-            print(f"Invalid input: {e}. Try again")
+            print(f"Invalid input: {e}. Try again.")
     # Compressing the numbers
     result = number_compressor(num1, num2, num3)
     print(f"Compressed number: {result}")
+
+
+if __name__ == "__main__":
+    main()
