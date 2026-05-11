@@ -41,7 +41,7 @@ class Employee:
         return fixed_salary + extra_salary
 
     def __str__(self) -> str:
-        return f"Employee: {self.name}\nDepartment: {self.department}\nWorking hours: {self.working_hours}\nExtra Working hours: {self.extra_working_hours}\nFixed hour salary:{self.fixed_hour_salary}\nExtra hour salary: {self.extra_hour_salary}"
+        return f"Employee: {self.name}\nDepartment: {self.department}\nWorking hours: {self.working_hours}\nExtra Working hours: {self.extra_working_hours}\nFixed hour salary: {self.fixed_hour_salary}\nExtra hour salary: {self.extra_hour_salary}"
 
 
 def main() -> None:
